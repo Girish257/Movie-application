@@ -4,18 +4,18 @@
     padding: 0;
 }
 
-#header {
+.container-fluid {
     padding: 10px;
     text-align: center;
-    background: lightblue;
+    background-color: #e3f2fd;
     color: black;
     font-size: 10px;
 }
 
 #container {
-    background-color: black;
+    background-color: lightgrey;
     width: 100%;
-    height: 100px;
+    height: 200px;
 
 }
 
@@ -25,6 +25,33 @@
 }
 
 #silder {
-    width: 30%;
-    margin-left: 34%
+    width: 20%;
+    margin-left: 39%;
+}
+
+#movielist {
+    width: 70%;
+    margin-left: 15%;
+}
+
+.card-text {
+    position: absolute;
+    cursor: pointer;
+    display: none;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    padding: 1rem;
+    overflow: hidden;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition: 0.3s ease-in;
+
+}
+
+.card:hover .card-text {
+    transform: translateY(0);
+    display: block;
+
 }
