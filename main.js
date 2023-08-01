@@ -75,7 +75,6 @@ function MovieList() {
                 });
 
 
-
                 carouselItem1.appendChild(imageElement1);
                 colInner1.appendChild(carouselItem1);
                 carouselItem1.appendChild(carouselItem2);

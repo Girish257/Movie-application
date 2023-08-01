@@ -1,28 +1,22 @@
 
-
-// Get the movie ID from the URL parameter
-
-function f2() {
-
+function urlfun() {
 
     const urlParams = new URLSearchParams(window.location.search);
-    // const movieId = urlParams.get('id');
+
     return urlParams.get('id')
-    // return
+
 
 }
 
-function f1() {
-    let movieId = f2()
+function displayMovie() {
+    let movieId = urlfun()
 
-    // `https://api.themoviedb.org/3/movie/${movieId}?api_key=21d0b61bb21a1374f1b66c994663ada3&append_to_response=credits,videos`
+
 
     fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=21d0b61bb21a1374f1b66c994663ada3&append_to_response=credits,videos`)
         .then((response) => response.json())
         .then((movieData) => {
-            // The fetched movieData object contains all the details of the selected movie
-            // console.log(movieData)
-            // Call a function to display the movie details on the page
+
             displayMovieDetails(movieData);
             let castImg = castDetails(movieData.credits.cast);
         })
@@ -33,12 +27,10 @@ function f1() {
 }
 
 
-f1()
+displayMovie()
 
 function displayMovieDetails(movieData) {
     const movieDetailsContainer = document.getElementById('movieDetails');
-
-    // Create elements to display the movie details
 
 
     const imageElement12 = document.createElement('img');
@@ -61,20 +53,20 @@ function displayMovieDetails(movieData) {
 
     // Watch Trailer
 
-    const apiUrlVideos = `https://api.themoviedb.org/3/movie/${movieData.id}/videos?api_key=21d0b61bb21a1374f1b66c994663ada3`;
-    fetch(apiUrlVideos)
+    const watchtrailer = `https://api.themoviedb.org/3/movie/${movieData.id}/videos?api_key=21d0b61bb21a1374f1b66c994663ada3`;
+    fetch(watchtrailer)
         .then((response) => response.json())
         .then((data) => {
             const videos = data.results;
             if (videos.length > 0) {
                 const trailer = videos.find((video) => video.type === 'Trailer');
                 if (trailer) {
-                    const youtubeLink = `https://www.youtube.com/watch?v=${trailer.key}`;
-                    const youtubeLinkElement = document.createElement('a');
-                    youtubeLinkElement.classList.add('trailerclass');
-                    youtubeLinkElement.href = youtubeLink;
-                    youtubeLinkElement.textContent = 'Watch Trailer';
-                    movieDetailsContainer.appendChild(youtubeLinkElement);
+                    const linkTube = `https://www.youtube.com/watch?v=${trailer.key}`;
+                    const linkTubeElement = document.createElement('a');
+                    linkTubeElement.classList.add('trailerclass');
+                    linkTubeElement.href = linkTube;
+                    linkTubeElement.textContent = 'Watch Trailer';
+                    movieDetailsContainer.appendChild(linkTubeElement);
                 }
             }
         })
