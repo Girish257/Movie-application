@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid {
+    padding: 10px;
+    text-align: center;
+    background-color: #e3f2fd;
+    color: black;
+    font-size: 10px;
+}
+
+#container {
+    background-color: lightgrey;
+    width: 100%;
+    height: 200px;
+
+}
+
+.d-flex {
+    padding-top: 20px;
+    padding-left: 40%;
+}
+
+#silder {
+    width: 20%;
+    margin-left: 39%;
+}
+
+#movielist {
+    width: 70%;
+    margin-left: 15%;
+}
+
+.card-text {
+    position: absolute;
+    cursor: pointer;
+    display: none;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: gray;
+    padding: 1.5rem 1rem;
+    overflow: hidden;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition: 0.3s ease-in;
+    border-bottom: 100px;
+}
+
+.card:hover .card-text {
+    transform: translateY(0);
+    display: block;
+    color: blue;
+
+}
+
+.col {
+    width: 100%;
+    margin-left: 150px;
+    height: 200px;
+
+}
+
+.a1 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.card-img-top {
+    padding-bottom: 8px;
+}
+
+.result {
+    max-width: 300px;
+}
+
+.cards {
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-bottom: 1px solid #00000045;
+    background-color: #dfece7;
+    margin: 10px;
+    transition-duration: 2000ms !important;
+    position: relative;
+}
+
+.abc {
+    max-width: 400px;
+    max-height: 400px;
+
+}
+
+.resultImage {
+    text-align: center;
+}
+
+#movieDetails {
+    display: flex;
+    background: lightgray;
+    width: 90%;
+    margin-left: 90px;
+}
+
+h2 {
+    margin: 30px
+}
+
+p {
+    margin: 50px
+}
+
+.castdiv {
+    background-color: lightslategray;
+    height: 300px;
+
+}
+
+.imgWidth {
+    height: 300px;
+    width: 200px;
+}
+
+.new {
+    display: flex;
+}
+
+.trailerclass {
+    flex: none;
+    margin: auto;
+    padding-right: 230px;
+}
