@@ -91,6 +91,8 @@
     position: relative;
 }
 
+/* Search css */
+
 .abc {
     max-width: 400px;
     max-height: 400px;
@@ -101,10 +103,11 @@
     text-align: center;
 }
 
+
+/* Movie details css */
 #movieDetails {
     padding-right: 50px;
     display: flex;
-    justify-content: space-between;
     background: lightgray;
     width: 90%;
     margin-left: 90px;
@@ -118,9 +121,12 @@ p {
     margin: 50px
 }
 
+
+/* Movie cast css */
 .castdiv {
+    padding-left: 120px;
     background-color: lightslategray;
-    height: 300px;
+    height: 400px;
 
 }
 
@@ -131,10 +137,9 @@ p {
 
 .new {
     display: flex;
+    padding-top: 10px;
 }
 
-/* .trailerclass {
-    flex: none;
-    margin: auto;
-    padding-right: 230px;
-} */
+.cast-container {
+    padding: 10px;
+}

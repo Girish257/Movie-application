@@ -95,7 +95,7 @@ MovieList();
 
 const apiKey = "api_key=21d0b61bb21a1374f1b66c994663ada3";
 const searchInput = document.getElementById("searchInput");
-const moviesList = document.getElementById("moviesList1");
+const searchList = document.getElementById("searchList");
 
 document.getElementById("searchform").addEventListener("submit", function (event) {
     event.preventDefault();
@@ -114,7 +114,7 @@ document.getElementById("searchform").addEventListener("submit", function (event
             } else {
                 output = '<p>No movies found for the given search term.</p>';
             }
-            moviesList.innerHTML = output;
+            searchList.innerHTML = output;
         })
         .catch((error) => {
             console.error("Error fetching data:", error);

@@ -1,4 +1,3 @@
-
 function urlfun() {
 
     const urlParams = new URLSearchParams(window.location.search);
@@ -78,9 +77,9 @@ function displayMovieDetails(movieData) {
 
 function castDetails(castImg) {
 
-    let ax = castImg.slice(0, 5)
-    console.log(ax)
-    console.log(ax[0])
+    let sliceCast = castImg.slice(0, 5)
+    console.log(sliceCast)
+    console.log(sliceCast[0])
 
 
     let cImg = document.getElementById('castImg');
@@ -90,17 +89,21 @@ function castDetails(castImg) {
     const cNewDiv = document.createElement('div');
     cNewDiv.classList.add('new');
 
-    ax.forEach((cast) => {
+    sliceCast.forEach((cast) => {
+        const castContainer = document.createElement('div'); // Create a container div for each cast
+        castContainer.classList.add('cast-container');
+
         const imgDiv = document.createElement('img');
         imgDiv.classList.add('imgWidth');
         imgDiv.src = 'https://image.tmdb.org/t/p/w300' + cast.profile_path;
-        cNewDiv.appendChild(imgDiv);
+        castContainer.appendChild(imgDiv);
 
         const namePara = document.createElement('p');
         namePara.textContent = cast.name;
-        cNewDiv.appendChild(namePara);
+        castContainer.appendChild(namePara);
+
+        cNewDiv.appendChild(castContainer);
     });
 
-    cDiv.appendChild(cNewDiv)
-
+    cDiv.appendChild(cNewDiv);
 }
