@@ -1,16 +1,12 @@
 function urlfun() {
 
     const urlParams = new URLSearchParams(window.location.search);
-
     return urlParams.get('id')
-
 
 }
 
 function displayMovie() {
     let movieId = urlfun()
-
-
 
     fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=21d0b61bb21a1374f1b66c994663ada3&append_to_response=credits,videos`)
         .then((response) => response.json())
@@ -78,8 +74,7 @@ function displayMovieDetails(movieData) {
 function castDetails(castImg) {
 
     let sliceCast = castImg.slice(0, 5)
-    console.log(sliceCast)
-    console.log(sliceCast[0])
+    
 
 
     let cImg = document.getElementById('castImg');
